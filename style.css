@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Using default font */
+    background-color: #f0f0f0; /* Light background color */
+    color: #333; /* Dark text for better visibility */
+    text-align: center; /* Center align for hero text */
+}
+
+.navbar {
+    position: fixed; /* Fix the navbar to the right side */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: #74ebd5; /* Background color for navbar */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 10px 15px; /* Padding for a better look */
+    z-index: 10; /* Ensure it's above other content */
+    transition: transform 0.3s; /* Transition for animation */
+}
+
+.title-bar {
+    position: fixed; /* Fix it to the left side */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    background-color: #74ebd5; /* Same background as the navbar */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 10px 15px; /* Padding for the title bar */
+    z-index: 10; /* Ensure it's above other content */
+    transition: transform 0.3s; /* Transition for animation */
+}
+
+.title-bar:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.title-bar h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 30px; /* Set font size for the title */
+    font-weight: normal; /* Use default font weight */
+    color: #333; /* Dark text color */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar li {
+    display: inline; /* Align items in a row */
+    margin-left: 15px; /* Space between items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text */
+    padding: 10px 15px; /* Padding around links */
+    border-radius: 15px; /* Rounded corners for links */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+    background-color: #5dc0b7; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+#hero {
+    padding: 100px 20px;
+}
+
+/* Styles for the login link */
+.login-link {
+    text-decoration: none;
+    background-color: #74ebd5; /* Same as login button */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border-radius: 25px; /* More rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the login link */
+.login-link:hover {
+    background-color: #5dc0b7; /* Darker shade for hover effect */
+}
+
+/* Footer styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Background particle canvas */
+#particleCanvas {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the canvas is behind other content */
+}
+
+/* Styles for the YouTube video container */
+.video-container {
+    max-width: 800px; /* تحديد عرض الحاوية */
+    margin: 50px auto; /* توسيط الحاوية */
+    border-radius: 20px; /* حواف ناعمة */
+    overflow: hidden; /* إخفاء العناصر الزائدة */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* إضافة ظل */
+    animation: fadeIn 1s ease; /* إضافة أنميشن */
+    transition: transform 0.3s ease; /* إضافة انتقال سلس للتكبير */
+}
+
+/* Styles for the iframe */
+.video-container iframe {
+    width: 100%; /* عرض كامل للحاوية */
+    height: 450px; /* ارتفاع ثابت */
+}
+
+/* أنميشن FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* الشفافية 0 في البداية */
+    }
+    to {
+        opacity: 1; /* الشفافية 1 في النهاية */
+    }
+}
+
+/* تأثير التكبير عند التحويم */
+.video-container:hover {
+    transform: scale(1.05); /* تكبير الحاوية بنسبة 5% */
+}
+
+/* استعلامات الوسائط لتحسين العرض على الأجهزة المحمولة */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* عرض القائمة بشكل عمودي */
+        align-items: center; /* توسيط العناصر */
+    }
+    
+    .video-container {
+        margin: 20px; /* تقليل الهوامش */
+        width: 90%; /* جعل العرض 90% */
+    }
+}

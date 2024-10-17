@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* استيراد خط روبوتو */
+
+body {
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    font-family: 'Roboto', sans-serif; /* استخدام خط روبوتو */
+    color: #333; /* لون نص داكن لتحسين الرؤية */
+    text-align: center; /* محاذاة النص إلى المركز */
+    overflow: hidden; /* منع تمرير الصفحة */
+}
+
+.navbar {
+    position: fixed; /* تثبيت شريط التنقل */
+    top: 20px; /* المسافة من الأعلى */
+    right: 20px; /* المسافة من اليمين */
+    background-color: rgba(116, 235, 213, 0.8); /* لون خلفية مع شفاف */
+    border-radius: 25px; /* زوايا مستديرة */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* ظل للعمق */
+    padding: 10px 15px; /* padding لتحسين المظهر */
+    z-index: 10; /* التأكد من أنها فوق المحتوى الآخر */
+    transition: transform 0.3s; /* انتقال للرسوم المتحركة */
+}
+
+/* تنسيق قائمة شريط التنقل */
+.navbar ul {
+    list-style-type: none; /* إزالة النقاط من القائمة */
+    margin: 0; /* إزالة الهامش الافتراضي */
+    padding: 0; /* إزالة padding الافتراضي */
+}
+
+/* تنسيق العناصر في شريط التنقل */
+.navbar li {
+    display: inline; /* محاذاة العناصر في صف */
+    margin-left: 15px; /* مسافة بين العناصر */
+}
+
+.navbar a {
+    text-decoration: none; /* إزالة خط التسطير */
+    color: #333; /* لون نص داكن */
+    padding: 10px 15px; /* padding حول الروابط */
+    border-radius: 15px; /* زوايا مستديرة للروابط */
+    transition: background-color 0.3s, transform 0.3s; /* انتقال سلس لتأثيرات التحويم */
+}
+
+/* تأثير التحويم للروابط في شريط التنقل */
+.navbar a:hover {
+    background-color: #5dc0b7; /* لون أغمق عند التحويم */
+    transform: scale(1.05); /* تأثير تكبير طفيف */
+}
+
+/* إضافة تنسيق خاص بالعنوان داخل شريط التنقل */
+.navbar .title {
+    display: inline-block; /* السماح للعنوان بالجلوس بجوار الروابط */
+    font-size: 30px; /* حجم خط للعنوان */
+    font-weight: 700; /* وزن خط ثقيل للعنوان */
+    color: #333; /* لون نص داكن للعنوان */
+    margin-left: 15px; /* مساحة قبل العنوان */
+}
+
+/* تنسيقات قسم البطل */
+#hero {
+    padding: 100px 20px; /* padding حول قسم البطل */
+    color: white; /* لون النص أبيض */
+}
+
+/* تنسيقات المربعات */
+.container {
+    display: flex; /* استخدام Flexbox لترتيب العناصر */
+    justify-content: center; /* محاذاة العناصر في الوسط */
+    align-items: flex-start; /* محاذاة العناصر لأعلى */
+    margin: 50px auto; /* إضافة هامش للتباعد */
+    width: 90%; /* تحديد عرض الحاوية */
+}
+
+.box {
+    background-color: rgba(116, 235, 213, 0.8); /* لون المربعات بنفس لون شريط التنقل */
+    border-radius: 25px; /* زوايا مستديرة */
+    padding: 20px; /* padding حول المحتوى */
+    width: 30%; /* عرض المربعات (يمكنك تعديل هذا ليكون أكثر طولًا) */
+    height: 300px; /* ارتفاع المربعات (اجعلها طويلة) */
+    margin: 0 10px; /* هامش بين المربعات */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* ظل للعمق */
+    transition: transform 0.3s ease; /* انتقال للرسوم المتحركة */
+}
+
+/* تأثير التحويم للمربعات */
+.box:hover {
+    transform: scale(1.05); /* تأثير تكبير عند التحويم */
+}
+
+/* تنسيق النص داخل المربعات */
+.box h2 {
+    color: #333; /* لون النص الداكن لزيادة الوضوح */
+    font-size: 28px; /* حجم خط أكبر */
+    margin: 0 0 10px 0; /* إزالة الهامش العلوي والسفلي وإضافة مسافة بين العنوان والنص */
+}
+
+.box p {
+    color: #333; /* لون نص داكن لزيادة الوضوح */
+    font-size: 20px; /* حجم خط أكبر */
+    margin: 0 0 10px 0; /* إزالة الهامش العلوي والسفلي وإضافة مسافة بين الفقرات */
+}
+
+/* تنسيق القائمة داخل المربعات */
+.box ul {
+    list-style-type: disc; /* نقاط للقائمة */
+    padding-left: 20px; /* padding للقائمة */
+}
+
+/* تنسيقات التذييل */
+footer {
+    position: fixed; /* تثبيت التذييل في الأسفل */
+    bottom: 0; /* المسافة من الأسفل */
+    width: 100%; /* عرض كامل */
+    background-color: rgba(34, 34, 34, 0.9); /* لون خلفية داكن مع شفاف */
+    color: white; /* لون نص أبيض */
+    text-align: center; /* محاذاة نص التذييل إلى المركز */
+    padding: 15px; /* padding حول التذييل */
+}
+
+/* إعدادات عنصر canvas للخلفية المتحركة */
+#particleCanvas {
+    background-color: #333; /* لون خلفية داكن */
+    position: fixed; /* تثبيت العنصر */
+    top: 0; /* المسافة من الأعلى */
+    left: 0; /* المسافة من اليسار */
+    width: 100%; /* عرض كامل */
+    height: 100%; /* ارتفاع كامل */
+    z-index: -1; /* التأكد من أن canvas خلف المحتوى الآخر */
+}

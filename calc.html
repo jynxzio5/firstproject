@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محول العملات</title>
+  <link rel="stylesheet" href="calc.css"> <!-- ملف CSS خارجي -->
+</head>
+<body>
+  <div class="container">
+    <h1>محول العملات</h1>
+    <form id="currency-form">
+      <label for="fromCurrency">من:</label>
+      <select id="fromCurrency">
+        <option value="USD">الدولار الأمريكي</option>
+        <option value="EUR">اليورو</option>
+        <option value="JOD">الدينار الأردني</option>
+        <!-- أضف المزيد من العملات -->
+      </select>
+
+      <label for="toCurrency">إلى:</label>
+      <select id="toCurrency">
+        <option value="USD">الدولار الأمريكي</option>
+        <option value="EUR">اليورو</option>
+        <option value="JOD">الدينار الأردني</option>
+        <!-- أضف المزيد من العملات -->
+      </select>
+
+      <label for="amount">المبلغ:</label>
+      <input type="number" id="amount" placeholder="أدخل المبلغ">
+
+      <button type="button" id="convertBtn">تحويل</button>
+    </form>
+
+    <div id="result"></div> <!-- لعرض النتيجة -->
+  </div>
+
+  <script src="calc.js"></script> <!-- ملف JavaScript خارجي -->
+</body>
+</html>
